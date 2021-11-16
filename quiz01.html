@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <h1>Quiz初級編</h1>
+
+  <p id="question"></p>
+
+  <ul>
+    <li><button id="answer00">0</button></li>
+    <li><button id="answer01">1</button></li>
+    <li><button id="answer02">2</button></li>
+  </ul>
+
+  <p>結果</p>
+  <p id="result"></p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+
+    const quiz = {
+      question: 'プログラミングにおいて次の3つの中で最も重要なものはなにか．',
+      answers: ['知性', 'コード量', '体格'],
+      correct: 1,
+    };
+    //問題
+    $("#question").text(quiz.question);
+
+    //選択肢
+    $("#answer00").text(quiz.answers[0])
+    $("#answer01").text(quiz.answers[1])
+    $("#answer02").text(quiz.answers[2])
+
+    //値を設定
+    $("#answer00").val(0);
+    $("#answer01").val(1);
+    $("#answer02").val(2);
+
+    //正誤の表示
+    $("button").on("click", function (e) {
+      if (Number(e.target.value) === quiz.correct) {
+        $("#result").text("正解！！！");
+
+      }
+      else {
+        $("#result").text("不正解・・・");
+      }
+    });
+
+  </script>
+</body>
+
+</html>

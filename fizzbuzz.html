@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>FizzBuzz問題</h1>
+
+  <div id="result"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    // まずはconsoleに表示してみよう！
+    const start = 1;
+    const end = 100;
+    const number = [];
+
+    for (let i = start; i <= end; i++) {
+
+      console.log(i);
+
+      //number += "<number>" + i + "</number>";
+
+      if (i % 3 == 0) {
+        $("#result").html("Buzz");
+      }
+      else if (i % 5 == 0) {
+        $("#result").html("Fizz");
+      }
+      else if (i % 3 == 0 && i % 5 == 0) {
+        $("#result").html("FizzBuzz");
+      }
+      else {
+        $("#result").html(number);
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
