@@ -12,7 +12,7 @@
 <body>
   <h1>Quiz中級編</h1>
 
-  <p>第 n 問</p>
+  <p>第<span id="number"></span> 問</p>
 
   <p id="question"></p>
 
@@ -31,16 +31,19 @@
 
     const quiz = [
       {
+        number: "1",
         question: 'プログラミングにおいて次の3つの中で最も重要なもの？？',
         answers: ['知性', 'コード量', '体格'],
         correct: 1,
       },
       {
+        number: "2",
         question: '課題をつくるときに大事なことは？？',
         answers: ['斬新なアイデア', 'コミットする時間', '洗練されたコード'],
         correct: 1,
       },
       {
+        number: "3",
         question: 'コードを書くことに疲れたときはどうするのがよいか．',
         answers: ['温泉に浸かる', 'ビールを飲む', '更にコードを書く'],
         correct: 2,
@@ -48,8 +51,6 @@
     ];
 
     const result = [];
-
-    $("#question").text(quiz[result.length].question);
 
     $("#question").text(quiz[result.length].question);
     $("#answer00").text(quiz[result.length].answers[0]);
